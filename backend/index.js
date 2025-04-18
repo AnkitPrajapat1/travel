@@ -323,5 +323,5 @@ app.get("/travel-stories-filter", authenticateToken, async (req, res) => {
 // serve statrtic files from theuloads and assets directory
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("./assets", express.static(path.join(__dirname, "assets")));
-app.listen(8000);
+app.listen(process.env.PORT||8000);
 module.exports = app;
