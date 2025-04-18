@@ -5,7 +5,7 @@ import ImageSelector from "../../components/Input/ImageSelector";
 import uploadImage from "../../utils/uploadImage";
 import TagInput from "../../components/Input/TagInput";
 import moment from "moment";
-import axiosInstance from "../../utils/axiosInstance";
+import axiosInstance from "../../utils/axiosinstance";
 import { toast } from "react-toastify";
 
 const AddEditTravelStory = ({
