@@ -113,7 +113,7 @@ app.post("/image-upload", upload.single("image"), async (req, res) => {
         .status(400)
         .json({ error: true, message: "No image uploaded" });
     }
-    const imageUrl = `http://localhost:8000/uploads/${req.file.filename}`;
+    const imageUrl = `https://travel-md2g.onrender.com/uploads/${req.file.filename}`;
     res.status(201).json({ imageUrl });
   } catch (error) {
     res.status(500).json({ error: true, message: error.message });
@@ -212,7 +212,7 @@ app.post("/edit-story/:id", authenticateToken, async (req, res) => {
         .status(404)
         .json({ error: true, message: "Travel story not found" });
     }
-    const placeholderImgUrl = `http://localhost:8000/assets/placeholder.png`;
+    const placeholderImgUrl = `https://travel-md2g.onrender.com/assets/placeholder.png`;
     travelStory.title = title;
     travelStory.story = story;
     travelStory.visitedDate = parsedVisitedDate;
